@@ -38,5 +38,20 @@ npm run web      # Start on web
 - Use the exported `Colors`, `Spacing`, `Radius` theme tokens for consistency.
 - Mock data lives in `src/data/mock.ts`; replace with real API later.
 
+## iOS / Xcode Simulator Notes
+- `app.json` includes a valid iOS `bundleIdentifier` (`com.david.bereal`) and Android `package`.
+- Native dependencies are pinned to Expo SDK 57 compatible versions:
+  - `react-native-gesture-handler`: `~2.32.0`
+  - `react-native-safe-area-context`: `~5.7.0`
+  - `react-native-screens`: `4.25.2`
+  - `expo-font`: installed as a peer dependency of `@expo/vector-icons`
+- Run `npx expo start --ios` to launch in the iOS simulator via Expo Go or a development build.
+
+## Auth Flow
+The app now starts on the **Login** screen (`src/screens/LoginScreen.tsx`).
+- Users can navigate to **Sign Up** (`src/screens/SignUpScreen.tsx`).
+- After successful login or sign-up, the app replaces the stack with **Home** (`src/screens/HomeScreen.tsx`).
+- The old lock-screen entry point has been removed.
+
 ## Current Stage
-Stage 1 complete: project foundation, navigation, theme, mock data, and all core screens scaffolded.
+Stage 2: iOS simulator compatibility fixes, Expo SDK 57 dependency alignment, and auth entry flow (Login / Sign Up) implemented.
