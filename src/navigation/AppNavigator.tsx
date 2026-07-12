@@ -2,7 +2,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../types';
-import { LockScreen } from '../screens/LockScreen';
+import { LoginScreen } from '../screens/LoginScreen';
+import { SignUpScreen } from '../screens/SignUpScreen';
 import { HomeScreen } from '../screens/HomeScreen';
 import { MyBeRealScreen } from '../screens/MyBeRealScreen';
 import { CommentsScreen } from '../screens/CommentsScreen';
@@ -16,14 +17,15 @@ export const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="LockScreen"
+        initialRouteName="Login"
         screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: '#000000' },
           animation: 'slide_from_right',
         }}
       >
-        <Stack.Screen name="LockScreen" component={LockScreen} />
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="SignUp" component={SignUpScreen} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="MyBeReal" component={MyBeRealScreen} />
         <Stack.Screen name="Comments" component={CommentsScreen} />
