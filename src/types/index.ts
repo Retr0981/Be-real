@@ -41,8 +41,8 @@ export interface Post {
 export type HomeTab = 'friends' | 'fof' | 'discovery';
 
 export type RootStackParamList = {
-  LockScreen: undefined;
-  Main: undefined;
+  Login: undefined;
+  SignUp: undefined;
   Home: undefined;
   MyBeReal: undefined;
   Comments: { postId: string };
